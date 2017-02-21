@@ -1,0 +1,80 @@
+body {
+	background-image:url(../images/yellowbrick.jpeg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+h2 {
+	font-weight: 2px;
+	font-size: 50px;
+	width: 650px;
+	background-color: #45D4FF;
+	padding: 20px;
+	margin-bottom: 10px;
+	color:white;
+}
+h3 {
+	font-size: 30px;
+	color:white;
+	margin-left: 20px;
+}
+
+#text-container {
+	float: left;
+	background-color:white;
+	opacity: 0.8;
+	width: 550px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+title {
+	color: blue;
+	font-family: Georgia;
+}
+p {
+	color: black;
+	font-family: Georgia;
+	margin: 10px;
+	line-height: 30px;
+	font-weight: 700;
+}
+#target {
+	padding: 5px;
+	background-color:none;
+	font-size: 30px;
+	width:400px;
+	
+	
+}
+#total {
+	background-color: yellow;
+	font-size: 30px;
+	width: 400px;
+	padding: 5px;
+}
+.friends {
+	width:500px;
+}
+img {
+	height: 200px;
+	width: 200px;
+}
+.dorothy {
+	width: auto;
+	margin: 10px;
+	height: 300px;
+	float: right;
+}
+
+.counter {
+	background-color: white;
+	margin-left: 5px;
+	padding: 10px;
+	width: 100px;
+	text-align:left;
+	float: right;
+	opacity: 0.5;
+}

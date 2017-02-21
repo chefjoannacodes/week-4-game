@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wizard of Oz</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+ <h2>We're Off to See the Wizard!</h2>
+<h3>Help Dorothy and Friends get to the Wizard of Oz!</h3>
+<div id="text-container">
+<div class="dorothy-pic">
+  <img class="dorothy" src="assets/images/250x570_dorothy.png" alt="dorothy">
+</div>
+<p>You will be given a target number of steps to take on the yellow brick road at the start of the game.</p>
+<p>There are four of Dorothy's friends below. By clicking on a friend you will add a specific amount of steps to your total steps.</p>
+<p>You win the game by matching your total steps to the target number, and you lose the game if your total steps goes above the target number.</p>
+<p>The value of each of Dorothy's friends is hidden from you until you click on it.</p>
+<p>Each time the game starts, all her friends have new values. </p>
+</div>
+<div></div>
+
+
+<div id="target">
+<p>Target number: <span id="targetNum"></span></p>
+</div>
+
+<!--<p>Guesses Left: <span id="guesses-left"></span></p>
+    <p>Wrong Guesses: <span id="wrong-guesses"></span></p>-->
+    <p class="counter">Wins: <span id="win-counter"></span></p>
+    <p class="counter">Losses: <span id="loss-counter"></span></p>
+
+<div id="total">
+<p>Your total score is: <span id="realScore"></span>
+</div>
+    <!--<h3 id="word-blank"></h3>
+    <button id="play" onclick="reloadPage()">Click to Start Game</button> -->
+
+
+
+<div class="friends">
+  <img class="toto" src="assets/images/toto.jpg" alt="toto"><!-- use value or attribute like calculator game-->
+  <img class="scarecrow" src="assets/images/scarecrow1.jpg" alt="scarecrow">
+  <img class="tinman" src="assets/images/tinman.jpg" alt="tinman">
+  <img class="lion" src="assets/images/lion.jpg" alt="lion">
+</div>
+
+    
+
+    <script src="assets/javascript/game.js"></script>
+
+
+
+</body>
+
+</html>
