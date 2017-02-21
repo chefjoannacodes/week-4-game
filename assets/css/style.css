@@ -15,9 +15,10 @@ h2 {
 	padding: 20px;
 	margin-bottom: 10px;
 	color:white;
+	font-style: italic;
 }
 h3 {
-	font-size: 30px;
+	font-size: 20px;
 	color:white;
 	margin-left: 20px;
 }
@@ -52,7 +53,7 @@ p {
 #total {
 	background-color: yellow;
 	font-size: 30px;
-	width: 400px;
+	width: 397px;
 	padding: 5px;
 }
 .friends {
