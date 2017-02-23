@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Wizard of Oz</title>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 <h3>Help Dorothy and Friends get to the Oz</h3>
 <div id="text-container">
 <div class="dorothy-pic">
-  <img class="dorothy" src="assets/images/250x570_dorothy.png" alt="dorothy">
+  <img id="dorothy" src="assets/images/250x570_dorothy.png" alt="dorothy">
 </div>
 <p>You will be given a target number of steps to take on the yellow brick road at the start of the game.</p>
 <p>There are four of Dorothy's friends below. By clicking on a friend you will add a specific amount of steps to your total steps.</p>
@@ -36,7 +36,7 @@
     <p class="counter">Wins: <span id="win-counter"></span></p>
     <p class="counter">Losses: <span id="loss-counter"></span></p>
 
-<div id="total">
+<div id="first-number">
 <p>Your total score is: <span id="realScore"></span>
 </div>
     <!--<h3 id="word-blank"></h3>
@@ -45,10 +45,10 @@
 
 
 <div class="friends">
-  <img class="toto" src="assets/images/toto.jpg" alt="toto"><!-- use value or attribute like calculator game-->
-  <img class="scarecrow" src="assets/images/scarecrow1.jpg" alt="scarecrow">
-  <img class="tinman" src="assets/images/tinman.jpg" alt="tinman">
-  <img class="lion" src="assets/images/lion.jpg" alt="lion">
+  <img id="toto" src="assets/images/toto.jpg" alt="toto">
+  <img id="scarecrow" src="assets/images/scarecrow1.jpg" alt="scarecrow">
+  <img id="tinman" src="assets/images/tinman.jpg" alt="tinman">
+  <img id="lion" src="assets/images/lion.jpg" alt="lion">
 </div>
 
     

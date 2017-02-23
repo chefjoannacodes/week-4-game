@@ -1,77 +1,182 @@
-//$(document).ready(function() {
+$(document).ready(function() {
 
-        var winNumber = Math.floor((Math.random() * 102) + 19); // will hold target number to win, will be random
-        // random (19,120)
+    var winNumber = Math.floor((Math.random() * 102) + 19); // will hold target number to win, will be random
+    // random (19,120)
+    var firstNumber = 0;
+    var secondNumber = 0;
+    var hasNumber = false;
+    var hitsNumber = 0; // will hold the value user hits
 
-        var hitsNumber = 0; // will hold the value user hits
+    var update = 0; //holds value user hits plus consecutive hits total
+    var totoVal = Math.floor((Math.random() * 12) + 1); //random value for each crystal random(1, 12)
 
-        var totoVal = Math.floor((Math.random() * 12) + 1); //random value for each crystal random(1, 12)
+    var scarecrowVal = Math.floor((Math.random() * 12) + 1);
+    var tinmanVal = Math.floor((Math.random() * 12) + 1);
+    var lionVal = Math.floor((Math.random() * 12) + 1);
+
+
+    //var hitAdd = 0; //will hold the total value after successive hits
+
+    var wins = 0;
+
+    var losses = 1;
+
+    var update = 0;
+
+    var total = 0;
+
+console.log(totoVal);
+console.log(scarecrowVal);
+console.log(tinmanVal);
+console.log(lionVal);
+console.log(winNumber);
+ // the startGame function is called when you win or lose a game.
+        // function startGame() {
+        //     //generates new random number
+        //     winNumber = Math.floor((Math.random() * 102) + 19);
+        //     //displays number
+            
+
+          $("#targetNum").html(winNumber);
+        //     //generates new values for friends
+        //     totoVal = Math.floor((Math.random() * 12) + 1);
+        //     scarecrowVal = Math.floor((Math.random() * 12) + 1);
+        //     tinmanVal = Math.floor((Math.random() * 12) + 1);
+        //     lionVal = Math.floor((Math.random() * 12) + 1);
+        //     // resets guesses to 0
+        //     hitsNumber = 0;
+        //     // display guess total
+        //     $("#realScore").html(hitsNumber);
+           
+            
+        // };
  
-        var scarecrowVal = Math.floor((Math.random() * 12) + 1);
-        var tinmanVal = Math.floor((Math.random() * 12) + 1);
-        var lionVal = Math.floor((Math.random() * 12) + 1);
+//  $("img.friends").click( function(){});
+
+// $("img.friends").on("click", function(){});
+
+//     on("click", function(){
+
+//    alert("test");
+//});
+
+//$("#toto, #scarecrow, #tinman, #lion").on("click", function(){});
+  //  alert("You clicked Toto");
+//});
+
+// $("img.friends").click( function(){
+//    alert($(this).attr("id"));
+// });
+// });
+// $("img.friends").find("img").click( function(){});
+    
+//    alert("You clicked toto!");
+
+//};
+//   $("#scarecrow").click(function() {}).append(scarecrowVal);
+//     console.log(scarecrowVal);
+
+//     $("#tinman").click(function() {}).append(tinmanVal);
+//     console.log(tinmanVal);
+
+//     $("#lion").click(function() {}).append(lionVal);
+//     console.log(lionVal);
 
 
-        //var hitAdd = 0; //will hold the total value after successive hits
+// var totoImgVal = $('#toto');
+// newTotoVal.innerHTML = totoVal;
 
-        var wins = 0;
+// var newTotoVal = $('<div' + totoVal + '<div>');
+//  totoImgVal.append(newTotoVal);
+// console.log(newTotoVal);
+// });
 
-        var losses = 1;
+   //  $(document).on("click", "img", function() {
+
+   //  if ($(this).hasClass("number") && !winNumber) {
+   //  	hasNumber = true;
+
+   //  	//If we haven't reached to total yet...
+   //  	if (hitsNumber === false) {
+
+   //  		//Then grab the number of the value clicked
+   //  	firstNumber += $(this).attr("img", function(totoVal){
+   //  			//print first number to page
+   //  			console.log(firstNumber);
+   //  	//Print it to the html
+   //  	$("#first-number").html(firstNumber);
+   //  })
+   //  };//if we have reached the target
+   // else {
+
+   //  }
+
+   //  	});
+   //  	});
+   //  });
+   //  }
+
+   //  $("#dorothy").on("click", function() {
+   //      $("#dorothy").animate({ top: "-=200px" }, "normal");
+   //  });
+
+   
+
+
+
+    //1. random value for game is selected and displayed to HTML
+    //$(".targetNum").html(winNumber);
+
+
+    //1. Player hits crystal, onClick event and holds that value
+
+
+    //$(".toto").append(totoVal);
+
+    $("#toto").on("click", function() {
+    //update(totoVal);	
+console.log("click");
+$("#toto").attr("value", totoVal);
+  total += totoVal
+  console.log("this is total", total);
+})
+});
 
 
 
 
-        //1. random value for game is selected and displayed to HTML
-        //$(".targetNum").html(winNumber);
+//$(".scarecrow").on("click", function() {
+// update(scarecrowVal);
+//});
+//$(".tinman").on("click", function() {
+// update(tinmanVal);
+// });
+// $(".lion").on("click", function() {
+//  update(lionVal);
+//});
 
 
-        //1. Player hits crystal, onClick event and holds that value
 
-        $(".toto").on("click", function() {
-            update(totoVal);
-        });
-        $(".scarecrow").click(function() {
-            update(scarecrowVal);
-        });
-        $(".tinman").click(function() {
-            update(tinmanVal);
-        });
-        $(".lion").click(function() {
-            update(lionVal);
-        });
-        console.log(totoVal);
-        console.log(scarecrowVal);
-        console.log(tinmanVal);
-        console.log(lionVal);
 
+
+//});
+
+
+
+
+       
 
 
 /*
-
-        // the startGame function is called when you win or lose a game.
-        function startGame() {
-            //generates new random number
-            winNumber = Math.floor((Math.random() * 102) + 19);
-            //displays number
-            $("#targetNum").html(winNumber);
-            //generates new values for friends
-            totoVal = Math.floor((Math.random() * 12) + 1);
-            scarecrowVal = Math.floor((Math.random() * 12) + 1);
-            tinmanVal = Math.floor((Math.random() * 12) + 1);
-            lionVal = Math.floor((Math.random() * 12) + 1);
-            // resets guesses to 0
-            hitsNumber = 0;
-            // display guess total
-            $("#realScore").html(hitsNumber);
-        
-        };
-
-
-
         //This function will update the user's total guess value
         function update(friendVal) {
             //Increase the user's score according to chosen friend
             hitsNumber += friendVal;
+            
+var update = 0;
+
+
+
             //removes old total and replaces it with new total
             $("#realScore").html(empty);
             $("#realScore").html(append);
