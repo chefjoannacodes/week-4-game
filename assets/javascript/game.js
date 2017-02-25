@@ -2,8 +2,6 @@ $(document).ready(function() {
 
     var winNumber = Math.floor((Math.random() * 102) + 19); // will hold target number to win, will be random
     // random (19,120)
-    var newTotal = 0;
-    var hasNumber = false;
 
     var totoVal = Math.floor((Math.random() * 12) + 1); //random value for each crystal random(1, 12)
     var scarecrowVal = Math.floor((Math.random() * 12) + 1);
@@ -12,7 +10,7 @@ $(document).ready(function() {
 
     var wins = 0;
 
-    var losses = 1;
+    var losses = 0;
 
     var total = 0; //holds value user hits plus consecutive hits total
 
@@ -58,7 +56,55 @@ $(document).ready(function() {
         total += totoVal
         console.log("this is total toto", total);
         $("#realScore").html(total); //this updates the final total
-    })
+    if (total < winNumber) {
+    $("#realScore").html(total);
+    console.log(total);
+}
+else if (total > winNumber){
+    $("#realScore").html(total);
+    alert("Too many steps, no seeing Oz today!!!!!");
+    losses++;
+    $("#loss-counter").html(losses);
+    startGame();
+}
+else {
+    $("#realScore").html(total);
+    alert("YOU WON! We're off to see the wonderful Oz today!");
+    wins++;
+    $("#win-counter").html(losses);
+    startGame();
+}
+});
+
+   })
+     $("#toto").on("click", function() {
+        $("#toto").animate({ height: "210px", width: "210px" });
+
+    });
+    $("#toto").on("click", function() {
+        $("#toto").animate({ height: "200px", width: "200px" });
+    });
+
+//  if (total < winNumber) {
+//     $("#realScore").html(total);
+//     console.log(total);
+// }
+// else if (total > winNumber){
+//     $("#realScore").html(total);
+//     alert("Too many steps, no seeing Oz today!!!!!");
+//     losses++;
+//     $("loss-counter").html(losses);
+//     startGame();
+// }
+// else {
+//     $("#realScore").html(total);
+//     alert("YOU WON! We're going to see the Oz today!");
+//     wins++;
+//     $("win-counter").html(losses);
+//     startGame();
+// }
+// });
+    
 
 // if (total < winNumber) {
 //     $("#realScore").html(total);
@@ -82,13 +128,7 @@ $(document).ready(function() {
 
 
 
-    $("#toto").on("click", function() {
-        $("#toto").animate({ height: "210px", width: "210px" });
-
-    });
-    $("#toto").on("click", function() {
-        $("#toto").animate({ height: "200px", width: "200px" });
-    });
+   
 
     $("#scarecrow").on("click", function() { //something happens when we click Scarecrow  
         $("#scarecrow").attr("value", scarecrowVal);
@@ -97,7 +137,12 @@ $(document).ready(function() {
         $("#realScore").html(total); //this updates the final total
     })
 
-
+ $("#scarecrow").on("click", function() {
+        $("#scarecrow").animate({ height: "210px", width: "210px" });
+    });
+    $("#scarecrow").on("click", function() {
+        $("#scarecrow").animate({ height: "200px", width: "200px" });
+    });
 //to update scarecrows w/l
 //     if (total < winNumber) {
 //     $("#realScore").html(total);
@@ -119,12 +164,7 @@ $(document).ready(function() {
 
 // }
 // });
-    $("#scarecrow").on("click", function() {
-        $("#scarecrow").animate({ height: "210px", width: "210px" });
-    });
-    $("#scarecrow").on("click", function() {
-        $("#scarecrow").animate({ height: "200px", width: "200px" });
-    });
+   
 
 
     $("#tinman").on("click", function() { //something happens when we click Tinman
@@ -133,7 +173,12 @@ $(document).ready(function() {
         console.log("this is total tinman", total);
         $("#realScore").html(total); //this updates the final total
     })
-
+ $("#tinman").on("click", function() {
+        $("#tinman").animate({ height: "210px", width: "210px" });
+    });
+    $("#tinman").on("click", function() {
+        $("#tinman").animate({ height: "200px", width: "200px" });
+    });
 //     if (total < winNumber) {
 //     $("#realScore").html(total);
 //     console.log(total);
@@ -153,12 +198,7 @@ $(document).ready(function() {
 //     startGame();
 // }
 
-    $("#tinman").on("click", function() {
-        $("#tinman").animate({ height: "210px", width: "210px" });
-    });
-    $("#tinman").on("click", function() {
-        $("#tinman").animate({ height: "200px", width: "200px" });
-    });
+   
 
     $("#lion").on("click", function() { //something happens when we click Lion
         $("#lion").attr("value", tinmanVal);
@@ -166,7 +206,12 @@ $(document).ready(function() {
         console.log("this is total lion", total);
         $("#realScore").html(total); //this updates the final total
     })
-
+ $("#lion").on("click", function() {
+        $("#lion").animate({ height: "210px", width: "210px" });
+    });
+    $("#lion").on("click", function() {
+        $("#lion").animate({ height: "200px", width: "200px" });
+    });
 //     if (total < winNumber) {
 //     $("#realScore").html(total);
 //     console.log(total);
@@ -186,16 +231,33 @@ $(document).ready(function() {
 //     startGame();
 // }
 
-    $("#lion").on("click", function() {
-        $("#lion").animate({ height: "210px", width: "210px" });
-    });
-    $("#lion").on("click", function() {
-        $("#lion").animate({ height: "200px", width: "200px" });
-    });
+   
     $("#realScore").on("click", function() {
         $("#realScore").attr("value", total);
-    })
-})
+    if (total < winNumber) {
+    $("#realScore").html(total);
+    console.log(total);
+}
+else if (total > winNumber){
+    $("#realScore").html(total);
+    alert("Too many steps, no seeing Oz today!!!!!");
+    losses++;
+    $("loss-counter").html(losses);
+    startGame();
+}
+else {
+    $("#realScore").html(total);
+    alert("YOU WON! We're going to see the Oz today!");
+    wins++;
+    $("win-counter").html(losses);
+    startGame();
+};
+
+
+
+    });//document ready closing
+
+
 
 
 
@@ -203,7 +265,6 @@ $(document).ready(function() {
     //$("#realScore").html(total);
 
 
- //document ready closing
 
 
 /*
