@@ -1,15 +1,64 @@
+ // the startGame function is called when you win or lose a game.
+        // function startGame() {
+        //     //generates new random number
+        //     winNumber = Math.floor((Math.random() * 102) + 19);
+        //     //displays number
+            
+
+   //     generates new values for friends
+        //     totoVal = Math.floor((Math.random() * 12) + 1);
+        //     scarecrowVal = Math.floor((Math.random() * 12) + 1);
+        //     tinmanVal = Math.floor((Math.random() * 12) + 1);
+        //     lionVal = Math.floor((Math.random() * 12) + 1);
+        //     // resets guesses to 0
+        //     hitsNumber = 0;
+        //     // display guess total
+        //     $("#realScore").html(hitsNumber);
+           
+            
+        // };
 
 
+// newTotoVal.innerHTML = totoVal;
 
-//$(".scarecrow").on("click", function() {
-// update(scarecrowVal);
-//});
-//$(".tinman").on("click", function() {
-// update(tinmanVal);
+// var newTotoVal = $('<div' + totoVal + '<div>');
+//  totoImgVal.append(newTotoVal);
+// console.log(newTotoVal);
 // });
-// $(".lion").on("click", function() {
-//  update(lionVal);
-//});
+
+   //  $(document).on("click", "img", function() {
+
+   //  if ($(this).hasClass("number") && !winNumber) {
+   //   hasNumber = true;
+
+   //   //If we haven't reached to total yet...
+   //   if (hitsNumber === false) {
+
+   //       //Then grab the number of the value clicked
+   //   firstNumber += $(this).attr("img", function(totoVal){
+   //           //print first number to page
+   //           console.log(firstNumber);
+   //   //Print it to the html
+   //   $("#first-number").html(firstNumber);
+   //  })
+   //  };//if we have reached the target
+   // else {
+
+   //  }
+
+   //   });
+   //   });
+   //  });
+   //  }
+
+   //  $("#dorothy").on("click", function() {
+   //      $("#dorothy").animate({ top: "-=200px" }, "normal");
+   //  });
+
+   
+
+
+
 
 
 
@@ -22,14 +71,7 @@
 
        
 
-
 /*
-        //This function will update the user's total guess value
-        function update(friendVal) {
-            //Increase the user's score according to chosen friend
-            hitsNumber += friendVal;
-            
-var update = 0;
 
 
 
